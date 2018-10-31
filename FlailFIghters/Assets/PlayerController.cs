@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     float moveLimiter = 0.7f;
     public float runSpeed = 20;
 
+    public string horizontalInput = "Horizontal";
+    public string verticalInput = "Vertical";
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -20,8 +23,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        horizontal = Input.GetAxisRaw("Horizontal");
-        vertical = Input.GetAxisRaw("Vertical");
+        horizontal = Input.GetAxisRaw(horizontalInput);
+        vertical = Input.GetAxisRaw(verticalInput);
     }
 
     void FixedUpdate()
